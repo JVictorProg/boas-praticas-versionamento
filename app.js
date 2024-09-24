@@ -29,8 +29,17 @@ function App() {
       },
     }));
 
-    // Limpar os campos após adicionar
     setAtividade('');
+  };
+
+  const removerAtividade = (dia, periodo) => {
+    setEstudos((prevEstudos) => ({
+      ...prevEstudos,
+      [dia]: {
+        ...prevEstudos[dia],
+        [periodo]: '',
+      },
+    }));
   };
 
   return (
@@ -67,12 +76,21 @@ function App() {
           <h2>{dia}</h2>
           <div className="periodo-container">
             <strong>Manhã:</strong> {estudos[dia].manha}
+            {estudos[dia].manha && (
+              <button onClick={() => removerAtividade(dia, 'manha')}>Remover Estudo</button>
+            )}
           </div>
           <div className="periodo-container">
             <strong>Tarde:</strong> {estudos[dia].tarde}
+            {estudos[dia].tarde && (
+              <button onClick={() => removerAtividade(dia, 'tarde')}>Remover Estudo</button>
+            )}
           </div>
           <div className="periodo-container">
             <strong>Noite:</strong> {estudos[dia].noite}
+            {estudos[dia].noite && (
+              <button onClick={() => removerAtividade(dia, 'noite')}>Remover Estudo</button>
+            )}
           </div>
         </div>
       ))}
