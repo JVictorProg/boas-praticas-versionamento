@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding: 0;
+  }
+  body {
+    background-color:#e6f7ff; /* Azul claro */
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #A9A9A9; /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #000000; /* Vermelho vibrante para o título principal */
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 3px 2px aliceblue;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #000000; /* Bordas em vermelho */
+    border-radius: 5px;
+    background-color: #4F4F4F; /* Fundo suave em tom de vermelho claro */
+  }
+  
+  h2 {
+    color: #FF8C00; /* Laranja vibrante para os dias da semana */
+    margin-bottom: 10px;
+    text-shadow: 2px 3px 2px black;
+  }
+  
+  .periodo-container {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #4F4F4F; /* Bordas em vermelho */
+    border-radius: 5px;
+    background-color: #4F4F4F; /* Fundo suave em tom de vermelho */
+    color:aliceblue;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+    color: #F0F8FF; /* Vermelho escuro para os rótulos */
+  }
+  
+  .texto_que_estudar {
+    position: relative;
+    top:15px;
+  }
+  
+  .label_adicionar_estudo {
+    position: relative;
+    bottom: 20px;
+    left: 100px;
+  }
+  
+  input[type="text"],
+  select {
+    width: calc(100% - 110px);
+    padding: 8px;
+    border: 1px solid #333; /* Bordas do campo de texto em vermelho */
+    border-radius: 5px;
+    background-color: #A9A9A9; /* Fundo suave no campo de entrada */
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #000000; /* Realce da borda ao focar */
+    outline: none;
+  }
+  
+  button {
+    background-color: #333; /* Vermelho */
+    color: aliceblue;
+    font-weight: 600;
+    margin-top: 19px;
+    border-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #FF8C00; /* Vermelho escuro */
+  }
