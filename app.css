@@ -1,63 +1,74 @@
-*{
-    margin:0;
-    padding: 0;
-  }
-  body {
-    background-color:#e6f7ff; /* Azul claro */
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+* { 
     margin: 0;
     padding: 0;
   }
   
+  body {
+    background-color: #f0f8ff; /* Fundo azul claro */
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+  }
+  
   .app-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #A9A9A9; /* Fundo branco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .app-container:hover {
+    transform: translateY(-5px);
   }
   
   h1 {
-    color: #000000; /* Vermelho vibrante para o título principal */
+    color: #4b0082; /* Roxo intenso */
     text-align: center;
-    margin-bottom: 30px;
-    text-shadow: 2px 3px 2px aliceblue;
+    margin-bottom: 40px;
+    text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 2.5em;
   }
   
   .input-container {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 2px solid #000000; /* Bordas em vermelho */
-    border-radius: 5px;
-    background-color: #4F4F4F; /* Fundo suave em tom de vermelho claro */
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 2px solid #4b0082; /* Bordas em roxo */
+    border-radius: 10px;
+    background-color: #f8f8ff; /* Fundo suave */
   }
   
   h2 {
-    color: #FF8C00; /* Laranja vibrante para os dias da semana */
-    margin-bottom: 10px;
-    text-shadow: 2px 3px 2px black;
+    color: #ff4500; /* Laranja vibrante */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.5em;
   }
   
   .periodo-container {
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #4F4F4F; /* Bordas em vermelho */
-    border-radius: 5px;
-    background-color: #4F4F4F; /* Fundo suave em tom de vermelho */
-    color:aliceblue;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #4b0082; /* Bordas em roxo */
+    border-radius: 8px;
+    background-color: #ffebcd; /* Fundo em tom de bege suave */
+    color: #333;
+    font-size: 1.1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   }
   
   label {
     display: inline-block;
-    width: 100px;
-    color: #F0F8FF; /* Vermelho escuro para os rótulos */
+    width: 120px;
+    color: #4b0082; /* Roxo escuro */
+    font-weight: bold;
   }
   
   .texto_que_estudar {
     position: relative;
-    top:15px;
+    top: 15px;
+    font-weight: bold;
+    color: #333;
   }
   
   .label_adicionar_estudo {
@@ -68,31 +79,65 @@
   
   input[type="text"],
   select {
-    width: calc(100% - 110px);
-    padding: 8px;
-    border: 1px solid #333; /* Bordas do campo de texto em vermelho */
-    border-radius: 5px;
-    background-color: #A9A9A9; /* Fundo suave no campo de entrada */
+    width: calc(100% - 130px);
+    padding: 10px;
+    border: 2px solid #4b0082; /* Bordas roxas */
+    border-radius: 8px;
+    background-color: #ffffff; /* Fundo branco */
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
   }
   
   input[type="text"]:focus,
   select:focus {
-    border-color: #000000; /* Realce da borda ao focar */
+    border-color: #ff4500; /* Realce em laranja ao focar */
     outline: none;
   }
   
   button {
-    background-color: #333; /* Vermelho */
-    color: aliceblue;
-    font-weight: 600;
+    background-color: #4b0082; /* Roxo escuro */
+    color: #fff;
+    font-weight: bold;
     margin-top: 19px;
-    border-top: 20px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   button:hover {
-    background-color: #FF8C00; /* Vermelho escuro */
+    background-color: #ff4500; /* Laranja vibrante ao passar o mouse */
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  .contador-materia {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f8f8ff;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #4b0082;
+  }
+  
+  .contador-materia input[type="text"] {
+    margin-top: 10px;
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #4b0082;
+    border-radius: 8px;
+    font-size: 1.1em;
+  }
+  
+  .contador-materia p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
   }
