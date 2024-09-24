@@ -17,6 +17,7 @@ function App() {
   const [atividade, setAtividade] = useState('');
   const [diaSelecionado, setDiaSelecionado] = useState('Segunda-feira');
   const [periodoSelecionado, setPeriodoSelecionado] = useState('manha');
+  const [materiaContar, setMateriaContar] = useState(''); // Para armazenar a matéria que será contada
 
   const adicionarAtividade = () => {
     if (!atividade) return;
@@ -40,6 +41,17 @@ function App() {
         [periodo]: '',
       },
     }));
+  };
+
+  // Função que conta quantos dias uma matéria será estudada
+  const contarDiasDeEstudo = (materia) => {
+    let count = 0;
+    for (const dia of diasDaSemana) {
+      if (estudos[dia].manha === materia || estudos[dia].tarde === materia || estudos[dia].noite === materia) {
+        count++;
+      }
+    }
+    return count;
   };
 
   return (
@@ -94,6 +106,17 @@ function App() {
           </div>
         </div>
       ))}
+
+      <div className="contador-materia">
+        <h2>Contar Dias de Estudo para uma Matéria</h2>
+        <input 
+          type="text" 
+          value={materiaContar} 
+          onChange={(e) => setMateriaContar(e.target.value)} 
+          placeholder="Digite a matéria"
+        />
+        <p>{materiaContar && `Você estudará ${materiaContar} por ${contarDiasDeEstudo(materiaContar)} dias.`}</p>
+      </div>
     </div>
   );
 }
